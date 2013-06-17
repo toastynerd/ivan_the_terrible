@@ -6,9 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-#gem 'rack-mini-profiler'
+gem 'rack-mini-profiler'
 
-gem 'will_paginate'
+gem 'kaminari'
 
 gem 'newrelic_rpm'
 
