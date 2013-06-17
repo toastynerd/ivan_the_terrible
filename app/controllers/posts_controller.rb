@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
 
-  caches_page :index, :show
   def index
     @posts = Post.order("created_at").page(params[:page]).per(5)
 
