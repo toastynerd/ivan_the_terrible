@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   caches_page :index
   def index
-    @posts = Post.order("created_at").page(params[:page]).per_page(5)
+    @posts = Post.order("created_at").page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
