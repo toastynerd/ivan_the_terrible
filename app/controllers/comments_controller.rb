@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
+
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    @comments = Comment.order("posted_at").page(params[:comment]).per_page(5)
 
     respond_to do |format|
       format.html # index.html.erb

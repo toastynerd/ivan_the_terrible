@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
+
+  caches_page :index
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at").page(params[:page]).per_page(5)
 
     respond_to do |format|
       format.html # index.html.erb

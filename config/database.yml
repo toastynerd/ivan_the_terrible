@@ -2,6 +2,10 @@ development:
   adapter: postgresql
   database: ivan_terrible_dev
   pool: 5
+  host: localhost
+  port: 5432  
+  username: ruby_on_rails
+  password: r1u2b3y5
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -10,6 +14,10 @@ test:
   adapter: postgresql
   database: ivan_terrible_test
   pool: 5
+  host: localhost
+  port: 5432
+  username: ruby_on_rails
+  password: r1u2b3y5
 
 production:
   adapter: postgresql

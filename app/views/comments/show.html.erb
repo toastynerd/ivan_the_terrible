@@ -7,7 +7,14 @@
 
 <p>
   <b>Post:</b>
-  <%= @comment.post %>
+  <%= @comment.post.title %>
+</p>
+
+<p>
+  <b>Replies:</b>
+  <% @comment.replies.each do |reply| %>
+    #<%= reply.id %> - <%= reply.body %></br>
+  <% end %>
 </p>
 
 
